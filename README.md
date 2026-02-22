@@ -126,6 +126,18 @@ Confidence is capped at 97% — this reflects irreducible execution uncertainty 
 
 ---
 
+## Prerequisites for accurate calculation
+
+The kill confidence calculation always runs, but its accuracy depends on two conditions being met:
+
+**1. You must click on the enemy champion in-game.**
+Clicking causes the target panel to appear in the top-left corner of the screen. This panel is the only source of real-time enemy HP and stats. Without it, the calculator falls back to assuming the enemy is at full HP and uses estimated base stats — the result is still shown but is significantly less accurate, especially mid- and late-game.
+
+**2. The enemy must be visible (not in fog of war).**
+When the enemy goes out of vision, the target panel disappears. The calculator then falls back to the last cached HP reading. The longer the enemy is out of vision, the more stale and unreliable that cached value becomes. This is reflected in the fallback chain: OCR → last cached reading → assume full HP.
+
+---
+
 ## OCR — reading enemy HP
 
 To use the enemy's **actual current HP** instead of assuming 100%:
@@ -205,6 +217,8 @@ Champions with full stats include: Sona, Jinx, Lux, Caitlyn, Ashe, Ezreal, Leona
 | Runes not included in damage model | Up to 40% undercount on squishes | Phase II |
 | HP bar colour detection — disabled | Do not click allied champions | Phase II |
 | Enemy defensive items — incomplete | Up to 300 HP error late game | Phase II |
+| Fog of war — panel disappears | Falls back to stale cached HP | Cache TTL + decay in Phase II |
+| Click required for accurate HP | Full HP assumed without panel | Fundamental — no workaround without API |
 
 ---
 
@@ -237,8 +251,12 @@ Champions with full stats include: Sona, Jinx, Lux, Caitlyn, Ashe, Ezreal, Leona
 
 **Why cap at 97%?** There is never 100% certainty — ping, reaction time, Zhonya's Hourglass, model inaccuracy and other factors always introduce residual risk.
 
+<<<<<<< Updated upstream
 Full mathematical documentation of the model : [`docs/lol_methodology_en.docx`](docs/lol_methodology_en.docx)
+=======
+>>>>>>> Stashed changes
 
+Full mathematical documentation of the model : [`docs/lol_methodology_en.docx`](docs/lol_methodology_en.docx)
 ---
 
 ## Contributing
