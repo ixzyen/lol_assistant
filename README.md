@@ -183,6 +183,9 @@ lol-kill-calculator/
 │   ├── champion_combos.py         # Combo sequences and damage models per champion
 │   └── item_stats.py              # HP/armor/MR bonuses from items
 │
+├── docs/
+│   └── lol_methodology_en.docx       # Mathematical model documentation (downloadable)
+│
 ├── requirements.txt
 └── README.md
 ```
