@@ -251,10 +251,6 @@ Champions with full stats include: Sona, Jinx, Lux, Caitlyn, Ashe, Ezreal, Leona
 
 **Why cap at 97%?** There is never 100% certainty — ping, reaction time, Zhonya's Hourglass, model inaccuracy and other factors always introduce residual risk.
 
-<<<<<<< Updated upstream
-Full mathematical documentation of the model : [`docs/lol_methodology_en.docx`](docs/lol_methodology_en.docx)
-=======
->>>>>>> Stashed changes
 
 Full mathematical documentation of the model : [`docs/lol_methodology_en.docx`](docs/lol_methodology_en.docx)
 ---
