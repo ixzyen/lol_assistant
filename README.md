@@ -41,7 +41,7 @@ The main loop runs every ~300ms. No game file modification or process memory acc
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/lol_assistant.git
-cd lol-kill-calculator
+cd lol_assistant
 ```
 
 ### 2. Install Python dependencies
