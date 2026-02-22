@@ -40,7 +40,7 @@ The main loop runs every ~300ms. No game file modification or process memory acc
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/lol-kill-calculator.git
+git clone https://github.com/YOUR_USERNAME/lol_assistant.git
 cd lol-kill-calculator
 ```
 
@@ -104,6 +104,12 @@ Launch **during an active game** — the app automatically detects whether Leagu
 | `Ctrl+F1` | Toggle calculator on / off |
 | `Ctrl+F2` | Show / hide overlay |
 | `Ctrl+F3` | Quit |
+
+### Target lock
+
+The calculator tracks a single enemy champion at a time. On startup it automatically locks onto the first enemy detected in the player list. To switch targets, use `Ctrl+F1` to cycle through available enemies — the current target is shown in the overlay and debug logs as `Target: ChampionName`.
+
+Locking onto a specific target is intentional: it prevents the overlay from flickering between multiple enemies during teamfights and keeps the confidence reading stable.
 
 ---
 
@@ -231,7 +237,7 @@ Champions with full stats include: Sona, Jinx, Lux, Caitlyn, Ashe, Ezreal, Leona
 
 **Why cap at 97%?** There is never 100% certainty — ping, reaction time, Zhonya's Hourglass, model inaccuracy and other factors always introduce residual risk.
 
-Full mathematical documentation of the model (Polish): [`docs/methodology_pl.docx`](docs/methodology_pl.docx)
+Full mathematical documentation of the model : [`docs/methodology.docx`](docs/methodology.docx)
 
 ---
 
@@ -250,8 +256,3 @@ The project is in early development — any pull request is welcome, especially:
 This project is an educational and research tool. It uses only the official Riot Live Client API (a local endpoint requiring no API key) and screen reading — it does not modify game files or access process memory. Use at your own risk.
 
 League of Legends is the property of Riot Games. This project is not affiliated with or endorsed by Riot Games.
-
- 
-[README.md](https://github.com/user-attachments/files/25471120/README.md)
-# lol_assistant
- 
