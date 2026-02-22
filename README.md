@@ -252,3 +252,6 @@ This project is an educational and research tool. It uses only the official Riot
 League of Legends is the property of Riot Games. This project is not affiliated with or endorsed by Riot Games.
 
  
+[README.md](https://github.com/user-attachments/files/25471120/README.md)
+# lol_assistant
+ 
